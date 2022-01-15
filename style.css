@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+}
+
+.container {
+    border: 1px solid;
+}
+
+#box_model, #button {
+    height: 30%;
+}
+
+#selector, #font {
+    height: 50%;
+}
+
+#background, #measure {
+    height: 20%;
+}
+
+#title, #colors {
+    height: 15%;
+}
+
+#flexbox {
+    height: 70%;
+}
+
+/* Box Model */
+
+#box_model {
+    display: flex;    
+}
+
+#box_model_diagram {
+    height: 100%;
+    width: 50%;
+    padding: 10px;
+}
+
+[component="margin"] {
+    background: red;
+    height: 90%;
+    padding: 20px;
+}
+
+[component="border"] {
+    background: green;
+    height: 100%;
+    padding: 20px;
+}
+
+[component="padding"] {
+    background: yellow;
+    height: 100%;
+    padding: 20px;
+}
+
+[component="content"] {
+    background: purple;
+    height: 100%;
+    padding: 20px;
+}
+
+#box_model_content {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#box_model_text {
+    border: 1px solid;
+    display: inline-block;
+    height: 15%;
+}
+
+#color {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid red;
+}
+
+/* Selector Table */
+
+#selector_table {
+    border: 1px solid;
+    height: 90%;
+    width: 100%;
+}
+
+#selector_table_data {
+    border: 1px solid;
+    width: 40%;
+}
+
+/* Background */
+
+#background {
+    display: flex;
+}
+
+#background_image {
+    width: 50%;
+    height: 100%;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+#background_text {
+    border: 1px solid red;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+
+#image_bg {
+    height: 100%;
+    width: 100%;
+}
