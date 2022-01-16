@@ -1,383 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="grid">
-        <div class="grid_item">
-            <div class="container" id="box_model">
-                <div id="box_model_diagram">
-                    <div class="container" id="title">Box Model</div>
-                    <div component="margin">
-                        <div component="border">
-                            <div component="padding">
-                                <div component="content"></div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="grid_item">
+        <div class="container" id="box_model">
+          <div id="box_model_diagram">
+            <div class="container" id="title">Box Model</div>
+            <div component="margin">
+              <div component="border">
+                <div component="padding">
+                  <div component="content"></div>
                 </div>
-                <div id="box_model_content">
-                    <div id="box_model_text">
-                        <span id="color" style="background: #0526DD;"></span>
-                        <span id="text">Margin</span>
-                    </div>
-                    <div id="box_model_text">
-                        <span id="color" style="background: #2c4af2;"></span>
-                        <span id="text">Border</span>
-                    </div>
-                    <div id="box_model_text">
-                        <span id="color" style="background: #566ce9;"></span>
-                        <span id="text">Padding</span>
-                    </div>
-                    <div id="box_model_text">
-                        <span id="color" style="background: #283892;"></span>
-                        <span id="text">Content</span>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="container" id="selector">
-                <div class="container" id="title">Selector</div>
-                <table class="table" id="selector_table">
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">*</td>
-                        <td class="table_data right" id="selector_table_data">all</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">div</td>
-                        <td class="table_data right" id="selector_table_data">all div tags</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">div, p</td>
-                        <td class="table_data right" id="selector_table_data">all div and p tags</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">div p</td>
-                        <td class="table_data right" id="selector_table_data">all p inside div</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">div > p</td>
-                        <td class="table_data right" id="selector_table_data">all p one level deep to div</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">div + p</td>
-                        <td class="table_data right" id="selector_table_data">p tags immediately after div</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">.classname</td>
-                        <td class="table_data right" id="selector_table_data">all elements with class classname</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">#idname</td>
-                        <td class="table_data right" id="selector_table_data">all elements with id idname</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">div.classname</td>
-                        <td class="table_data right" id="selector_table_data">all divs with certain classname</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">div#idname</td>
-                        <td class="table_data right" id="selector_table_data">all divs with id idname</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">#idname *</td>
-                        <td class="table_data right" id="selector_table_data">all elements inside idname</td>
-                    </tr>
-                </table>
+          </div>
+          <div id="box_model_content">
+            <div id="box_model_text">
+              <span id="color" style="background: #0526dd"></span>
+              <span id="text">Margin</span>
             </div>
-            <div class="container" id="background">
-                <div id="background_image">
-                    <img src="on.webp" id="image_bg" alt="backround">
-                </div>
-                <div id="background_text" type="code">
-                    <div class="container" id="title">Background Options</div>
-                    <code>
-                        #idname {
-                            background: url('https://www.image.scom/ asdasdom.jpg');
-                        }
-                    </code>
-                </div>
+            <div id="box_model_text">
+              <span id="color" style="background: #2c4af2"></span>
+              <span id="text">Border</span>
             </div>
+            <div id="box_model_text">
+              <span id="color" style="background: #566ce9"></span>
+              <span id="text">Padding</span>
+            </div>
+            <div id="box_model_text">
+              <span id="color" style="background: #283892"></span>
+              <span id="text">Content</span>
+            </div>
+          </div>
         </div>
-        <div class="grid_item">
-            <div class="container" id="button">
-                <div id="actual_button_container">
-                    <div id="button_container">
-                        <div id="button_item">
-                            <button class="btn" id="btn_1">Standard Button</button>
-                        </div>
-                        <div id="button_code" type="code">
-                            <code>
-                                button {
-                                    border: 1px solid red;
-                                    width: 50%;
-                                    height: 100%;
-                                    padding: 10px;
-                                }
-                            </code>
-                        </div>
-                    </div>
-                    <div id="button_container">
-                        <div id="button_item">
-                            <button class="btn" id="btn_2">Styled Button</button>
-                        </div>
-                        <div id="button_code" type="code">
-                            <code>
-                                button {
-                                    border: 1px solid red;
-                                    width: 50%;
-                                    height: 100%;
-                                    padding: 10px;
-                                }
-                            </code>
-                        </div>
-                    </div>
-                    <div id="button_container">
-                        <div id="button_item">
-                            <button class="btn" id="btn_3">Disabled Button</button>
-                        </div>
-                        <div id="button_code" type="code">
-                            <code>
-                                button {
-                                    border: 1px solid red;
-                                    width: 50%;
-                                    height: 100%;
-                                    padding: 10px;
-                                }
-                            </code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container" id="font">
-                <div class="container" id="title">Sizing Options</div>
-                <table class="table" id="selector_table">
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">em</td>
-                        <td class="table_data right" id="selector_table_data">Relative to the font-size of the element (2em means 2 times the size of the current font)</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">rem</td>
-                        <td class="table_data right" id="selector_table_data">Relative to the font-size of the element (2em means 2 times the size of the current font)</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">vh/vw</td>
-                        <td class="table_data right" id="selector_table_data">Relative to the font-size of the element (2em means 2 times the size of the current font)</td>
-                    </tr>
-                    <tr class="table_row" id="selector_table_row">
-                        <td class="table_data left" id="selector_table_data">%</td>
-                        <td class="table_data right" id="selector_table_data">Relative to the font-size of the element (2em means 2 times the size of the current font)</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="container" id="position">
-                <div class="container" id="title">CSS Positioning</div>
-                <div class="position_container">
-                    <div class="position_block">
-                        <div class="parent_div">
-                            <div class="child_div" id="relative_1">1</div>
-                            <div class="child_div" id="relative_2">1</div>
-                        </div>
-                        <div class="position_text">Relative: Relative to it's original position</div>
-                    </div>
-                    <div class="position_block">
-                        <div class="parent_div">
-                            <div class="child_div" id="absolute_1">1</div>
-                        </div>
-                        <div class="position_text">Absolute: Relative to parent's body</div>
-                    </div>
-                </div>
-                <div class="position_container">
-                    <div class="position_block">
-                        <div class="parent_div">
-                            <div class="child_div" id="fixed_1">1</div>
-                            <div class="child_div" id="fixed_2">2</div>
-                        </div>
-                        <div class="position_text">Fixed : Remains at same position after scroll</div>
-                    </div>
-                    <div class="position_block">
-                        <div class="parent_div">
-                            <div class="child_div" id="sticky_1">1</div>
-                        </div>
-                        <div class="position_text">Sticky: Relative until in viewport, else fixed</div>
-                    </div>
-                </div>
-            </div>
+        <div class="container" id="selector">
+          <div class="container" id="title">Selector</div>
+          <table class="table" id="selector_table">
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">*</td>
+              <td class="table_data right" id="selector_table_data">all</td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">div</td>
+              <td class="table_data right" id="selector_table_data">
+                all div tags
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">div, p</td>
+              <td class="table_data right" id="selector_table_data">
+                all div and p tags
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">div p</td>
+              <td class="table_data right" id="selector_table_data">
+                all p inside div
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">div > p</td>
+              <td class="table_data right" id="selector_table_data">
+                all p one level deep to div
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">div + p</td>
+              <td class="table_data right" id="selector_table_data">
+                p tags immediately after div
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">
+                .classname
+              </td>
+              <td class="table_data right" id="selector_table_data">
+                all elements with class classname
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">#idname</td>
+              <td class="table_data right" id="selector_table_data">
+                all elements with id idname
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">
+                div.classname
+              </td>
+              <td class="table_data right" id="selector_table_data">
+                all divs with certain classname
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">
+                div#idname
+              </td>
+              <td class="table_data right" id="selector_table_data">
+                all divs with id idname
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">
+                #idname *
+              </td>
+              <td class="table_data right" id="selector_table_data">
+                all elements inside idname
+              </td>
+            </tr>
+          </table>
         </div>
-        <div class="grid_item">
-            <div class="container" id="cheatsheet-header">
-                <div class="cheatsheet_title">
-                    CSS CheatSheet
-                </div>
-                <div class="personal_details">
-                    <div class="twitter" id="link">@twitter</div>
-                    <div class="github" id="link">@github</div>
-                </div>
-            </div>
-            <div class="container" id="colors">
-                <div class="container" id="title">Color Options</div>
-                <div class="color_container">
-                    <div id="color_container" class="color1"></div>
-                    <div id="color_code">background: #836afd;</div>
-                </div>
-                <div class="color_container">
-                    <div id="color_container" class="color2"></div>
-                    <div id="color_code">background: rgba(131,106,253, 0.5);</div>
-                </div>
-                <div class="color_container">
-                    <div id="color_container" class="color3"></div>
-                    <div id="color_code">background: linear-gradient(#836afd, #ffffff);</div>
-                </div>
-            </div>
-            <div class="container" id="flexbox">
-                <div class="container" id="title">Flexbox</div>
-                <div class="flex_main">
-                    <div class="flex_sub">
-                        <div class="flex_item">
-                            <div class="flex_boxes" id="box_1">
-                                <div box="flex_box" id="flex_box_1">1</div>
-                                <div box="flex_box" id="flex_box_2">2</div>
-                                <div box="flex_box" id="flex_box_2">3</div>
-                            </div>
-                            <div class="flex_code" type="code">
-                                <code>
-                                    justify-content: flex-start;
-                                </code>
-                            </div>
-                        </div>
-                        <div class="flex_item">
-                            <div class="flex_boxes" id="box_2">
-                                <div box="flex_box" id="flex_box_1">1</div>
-                                <div box="flex_box" id="flex_box_2">2</div>
-                                <div box="flex_box" id="flex_box_2">3</div>
-                            </div>
-                            <div class="flex_code" type="code">
-                                <code>
-                                    justify-content: flex-end;
-                                </code>
-                            </div>
-                        </div>
-                        <div class="flex_item">
-                            <div class="flex_boxes" id="box_3">
-                                <div box="flex_box" id="flex_box_1">1</div>
-                                <div box="flex_box" id="flex_box_2">2</div>
-                                <div box="flex_box" id="flex_box_2">3</div>
-                            </div>
-                            <div class="flex_code" type="code">
-                                <code>
-                                    justify-content: center;
-                                </code>
-                            </div>
-                        </div>
-                        <div class="flex_item">
-                            <div class="flex_boxes" id="box_4">
-                                <div box="flex_box" id="flex_box_1">1</div>
-                                <div box="flex_box" id="flex_box_2">2</div>
-                                <div box="flex_box" id="flex_box_2">3</div>
-                            </div>
-                            <div class="flex_code" type="code">
-                                <code>
-                                    justify-content: space-between;
-                                </code>
-                            </div>
-                        </div>
-                        <div class="flex_item">
-                            <div class="flex_boxes" id="box_5">
-                                <div box="flex_box" id="flex_box_1">1</div>
-                                <div box="flex_box" id="flex_box_2">2</div>
-                                <div box="flex_box" id="flex_box_2">3</div>
-                            </div>
-                            <div class="flex_code" type="code">
-                                <code>
-                                    justify-content: space-around;
-                                </code>
-                            </div>
-                        </div>
-                        <div class="flex_item">
-                            <div class="flex_boxes" id="box_6">
-                                <div box="flex_box" id="flex_box_1">1</div>
-                                <div box="flex_box" id="flex_box_2">2</div>
-                                <div box="flex_box" id="flex_box_2">3</div>
-                            </div>
-                            <div class="flex_code" type="code">
-                                <code>
-                                    justify-content: space-evenly;
-                                </code>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex_sub">
-                        <div class="flex_item">
-                            <div class="flex_boxes" id="box_7">
-                                <div box="flex_box" id="flex_box_1">1</div>
-                                <div box="flex_box" id="flex_box_2">2</div>
-                                <div box="flex_box" id="flex_box_2">3</div>
-                            </div>
-                            <div class="flex_code" type="code">
-                                <code>
-                                    align-items: flex-start;
-                                </code>
-                            </div>
-                        </div>
-                        <div class="flex_item">
-                            <div class="flex_boxes" id="box_8">
-                                <div box="flex_box" id="flex_box_1">1</div>
-                                <div box="flex_box" id="flex_box_2">2</div>
-                                <div box="flex_box" id="flex_box_2">3</div>
-                            </div>
-                            <div class="flex_code" type="code">
-                                <code>
-                                    align-items: flex-end;
-                                </code>
-                            </div>
-                        </div>
-                        <div class="flex_item">
-                            <div class="flex_boxes" id="box_9">
-                                <div box="flex_box" id="flex_box_1">1</div>
-                                <div box="flex_box" id="flex_box_2">2</div>
-                                <div box="flex_box" id="flex_box_2">3</div>
-                            </div>
-                            <div class="flex_code" type="code">
-                                <code>
-                                    align-items: stretch;
-                                </code>
-                            </div>
-                        </div>
-                        <div class="flex_item">
-                            <div class="flex_boxes" id="box_10">
-                                <div box="flex_box" id="flex_box_1">1</div>
-                                <div box="flex_box" id="flex_box_2">2</div>
-                                <div box="flex_box" id="flex_box_2">3</div>
-                            </div>
-                            <div class="flex_code" type="code">
-                                <code>
-                                    align-items: baseline;
-                                </code>
-                            </div>
-                        </div>
-                        <div class="flex_item">
-                            <div class="flex_boxes" id="box_11">
-                                <div box="flex_box" id="flex_box_1">1</div>
-                                <div box="flex_box" id="flex_box_2">2</div>
-                                <div box="flex_box" id="flex_box_2">3</div>
-                            </div>
-                            <div class="flex_code" type="code">
-                                <code>
-                                    align-items: center;
-                                </code>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container" id="background">
+          <div id="background_image">
+            <img src="on.webp" id="image_bg" alt="backround" />
+          </div>
+          <div id="background_text" type="code">
+            <div class="container" id="title">Background Options</div>
+            <code>
+              #idname { background: url('https://www.image.scom/ asdasdom.jpg');
+              }
+            </code>
+          </div>
         </div>
+      </div>
+      <div class="grid_item">
+        <div class="container" id="button">
+          <div id="actual_button_container">
+            <div id="button_container">
+              <div id="button_item">
+                <button class="btn" id="btn_1">Standard Button</button>
+              </div>
+              <div id="button_code" type="code">
+                <code>
+                  button { border: 1px solid red; width: 50%; height: 100%;
+                  padding: 10px; }
+                </code>
+              </div>
+            </div>
+            <div id="button_container">
+              <div id="button_item">
+                <button class="btn" id="btn_2">Styled Button</button>
+              </div>
+              <div id="button_code" type="code">
+                <code>
+                  button { border: 1px solid red; width: 50%; height: 100%;
+                  padding: 10px; }
+                </code>
+              </div>
+            </div>
+            <div id="button_container">
+              <div id="button_item">
+                <button class="btn" id="btn_3">Disabled Button</button>
+              </div>
+              <div id="button_code" type="code">
+                <code>
+                  button { border: 1px solid red; width: 50%; height: 100%;
+                  padding: 10px; }
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="font">
+          <div class="container" id="title">Sizing Options</div>
+          <table class="table" id="selector_table">
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">em</td>
+              <td class="table_data right" id="selector_table_data">
+                Relative to the font-size of the element (2em means 2 times the
+                size of the current font)
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">rem</td>
+              <td class="table_data right" id="selector_table_data">
+                Relative to the font-size of the element (2em means 2 times the
+                size of the current font)
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">vh/vw</td>
+              <td class="table_data right" id="selector_table_data">
+                Relative to the font-size of the element (2em means 2 times the
+                size of the current font)
+              </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+              <td class="table_data left" id="selector_table_data">%</td>
+              <td class="table_data right" id="selector_table_data">
+                Relative to the font-size of the element (2em means 2 times the
+                size of the current font)
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="container" id="position">
+          <div class="container" id="title">CSS Positioning</div>
+          <div class="position_container">
+            <div class="position_block">
+              <div class="parent_div">
+                <div class="child_div" id="relative_1">1</div>
+                <div class="child_div" id="relative_2">1</div>
+              </div>
+              <div class="position_text">
+                Relative: Relative to it's original position
+              </div>
+            </div>
+            <div class="position_block">
+              <div class="parent_div">
+                <div class="child_div" id="absolute_1">1</div>
+              </div>
+              <div class="position_text">
+                Absolute: Relative to parent's body
+              </div>
+            </div>
+          </div>
+          <div class="position_container">
+            <div class="position_block">
+              <div class="parent_div">
+                <div class="child_div" id="fixed_1">1</div>
+                <div class="child_div" id="fixed_2">2</div>
+              </div>
+              <div class="position_text">
+                Fixed : Remains at same position after scroll
+              </div>
+            </div>
+            <div class="position_block">
+              <div class="parent_div">
+                <div class="child_div" id="sticky_1">1</div>
+              </div>
+              <div class="position_text">
+                Sticky: Relative until in viewport, else fixed
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid_item">
+        <div class="container" id="cheatsheet-header">
+          <div class="cheatsheet_title">CSS CheatSheet</div>
+          <div class="personal_details">
+            <div class="twitter" id="link">@twitter</div>
+            <div class="github" id="link">@github</div>
+          </div>
+        </div>
+        <div class="container" id="colors">
+          <div class="container" id="title">Color Options</div>
+          <div class="color_container">
+            <div id="color_container" class="color1"></div>
+            <div id="color_code">background: #836afd;</div>
+          </div>
+          <div class="color_container">
+            <div id="color_container" class="color2"></div>
+            <div id="color_code">background: rgba(131,106,253, 0.5);</div>
+          </div>
+          <div class="color_container">
+            <div id="color_container" class="color3"></div>
+            <div id="color_code">
+              background: linear-gradient(#836afd, #ffffff);
+            </div>
+          </div>
+        </div>
+        <div class="container" id="flexbox">
+          <div class="container" id="title">Flexbox</div>
+          <div class="flex_main">
+            <div class="flex_sub">
+              <div class="flex_item">
+                <div class="flex_boxes" id="box_1">
+                  <div box="flex_box" id="flex_box_1">1</div>
+                  <div box="flex_box" id="flex_box_2">2</div>
+                  <div box="flex_box" id="flex_box_2">3</div>
+                </div>
+                <div class="flex_code" type="code">
+                  <code> justify-content: flex-start; </code>
+                </div>
+              </div>
+              <div class="flex_item">
+                <div class="flex_boxes" id="box_2">
+                  <div box="flex_box" id="flex_box_1">1</div>
+                  <div box="flex_box" id="flex_box_2">2</div>
+                  <div box="flex_box" id="flex_box_2">3</div>
+                </div>
+                <div class="flex_code" type="code">
+                  <code> justify-content: flex-end; </code>
+                </div>
+              </div>
+              <div class="flex_item">
+                <div class="flex_boxes" id="box_3">
+                  <div box="flex_box" id="flex_box_1">1</div>
+                  <div box="flex_box" id="flex_box_2">2</div>
+                  <div box="flex_box" id="flex_box_2">3</div>
+                </div>
+                <div class="flex_code" type="code">
+                  <code> justify-content: center; </code>
+                </div>
+              </div>
+              <div class="flex_item">
+                <div class="flex_boxes" id="box_4">
+                  <div box="flex_box" id="flex_box_1">1</div>
+                  <div box="flex_box" id="flex_box_2">2</div>
+                  <div box="flex_box" id="flex_box_2">3</div>
+                </div>
+                <div class="flex_code" type="code">
+                  <code> justify-content: space-between; </code>
+                </div>
+              </div>
+              <div class="flex_item">
+                <div class="flex_boxes" id="box_5">
+                  <div box="flex_box" id="flex_box_1">1</div>
+                  <div box="flex_box" id="flex_box_2">2</div>
+                  <div box="flex_box" id="flex_box_2">3</div>
+                </div>
+                <div class="flex_code" type="code">
+                  <code> justify-content: space-around; </code>
+                </div>
+              </div>
+              <div class="flex_item">
+                <div class="flex_boxes" id="box_6">
+                  <div box="flex_box" id="flex_box_1">1</div>
+                  <div box="flex_box" id="flex_box_2">2</div>
+                  <div box="flex_box" id="flex_box_2">3</div>
+                </div>
+                <div class="flex_code" type="code">
+                  <code> justify-content: space-evenly; </code>
+                </div>
+              </div>
+            </div>
+            <div class="flex_sub">
+              <div class="flex_item">
+                <div class="flex_boxes" id="box_7">
+                  <div box="flex_box" id="flex_box_1">1</div>
+                  <div box="flex_box" id="flex_box_2">2</div>
+                  <div box="flex_box" id="flex_box_2">3</div>
+                </div>
+                <div class="flex_code" type="code">
+                  <code> align-items: flex-start; </code>
+                </div>
+              </div>
+              <div class="flex_item">
+                <div class="flex_boxes" id="box_8">
+                  <div box="flex_box" id="flex_box_1">1</div>
+                  <div box="flex_box" id="flex_box_2">2</div>
+                  <div box="flex_box" id="flex_box_2">3</div>
+                </div>
+                <div class="flex_code" type="code">
+                  <code> align-items: flex-end; </code>
+                </div>
+              </div>
+              <div class="flex_item">
+                <div class="flex_boxes" id="box_9">
+                  <div box="flex_box" id="flex_box_1">1</div>
+                  <div box="flex_box" id="flex_box_2">2</div>
+                  <div box="flex_box" id="flex_box_2">3</div>
+                </div>
+                <div class="flex_code" type="code">
+                  <code> align-items: stretch; </code>
+                </div>
+              </div>
+              <div class="flex_item">
+                <div class="flex_boxes" id="box_10">
+                  <div box="flex_box" id="flex_box_1">1</div>
+                  <div box="flex_box" id="flex_box_2">2</div>
+                  <div box="flex_box" id="flex_box_2">3</div>
+                </div>
+                <div class="flex_code" type="code">
+                  <code> align-items: baseline; </code>
+                </div>
+              </div>
+              <div class="flex_item">
+                <div class="flex_boxes" id="box_11">
+                  <div box="flex_box" id="flex_box_1">1</div>
+                  <div box="flex_box" id="flex_box_2">2</div>
+                  <div box="flex_box" id="flex_box_2">3</div>
+                </div>
+                <div class="flex_code" type="code">
+                  <code> align-items: center; </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
