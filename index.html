@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="braces.svg" type="image/x-icon">  
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>CSS Cheatsheet</title>
   </head>
   <body>
     <div class="grid">
@@ -130,8 +131,10 @@
           <div id="background_text" type="code">
             <div class="container" id="title">Background Options</div>
             <code>
-              #idname { background: url('https://www.image.scom/ asdasdom.jpg');
-              }
+                <div id="bg_code">background-image: url(...);</div>
+                <div id="bg_code">background-position: left/center/right/top/center/bottom;</div>
+                <div id="bg_code">background-size:cover/X Y;</div>
+                <div id="bg_code">background-repeat: no-repeat/repeat-x/repeat-y;</div>
             </code>
           </div>
         </div>
@@ -144,32 +147,15 @@
                 <button class="btn" id="btn_1">Standard Button</button>
               </div>
               <div id="button_code" type="code">
-                <code>
-                  button { border: 1px solid red; width: 50%; height: 100%;
-                  padding: 10px; }
-                </code>
+                <button class="btn btn_copy" onclick="copyTextButton()">Click to Copy</Button>
               </div>
             </div>
             <div id="button_container">
               <div id="button_item">
-                <button class="btn" id="btn_2">Styled Button</button>
+                <input class="input" id="input_1" />
               </div>
               <div id="button_code" type="code">
-                <code>
-                  button { border: 1px solid red; width: 50%; height: 100%;
-                  padding: 10px; }
-                </code>
-              </div>
-            </div>
-            <div id="button_container">
-              <div id="button_item">
-                <button class="btn" id="btn_3">Disabled Button</button>
-              </div>
-              <div id="button_code" type="code">
-                <code>
-                  button { border: 1px solid red; width: 50%; height: 100%;
-                  padding: 10px; }
-                </code>
+                <button class="btn btn_copy" onclick="copyTextInput()">Click to Copy</Button>
               </div>
             </div>
           </div>
@@ -180,30 +166,38 @@
             <tr class="table_row" id="selector_table_row">
               <td class="table_data left" id="selector_table_data">em</td>
               <td class="table_data right" id="selector_table_data">
-                Relative to the font-size of the element (2em means 2 times the
-                size of the current font)
+                Relative to the font-size of the element.
               </td>
             </tr>
             <tr class="table_row" id="selector_table_row">
               <td class="table_data left" id="selector_table_data">rem</td>
               <td class="table_data right" id="selector_table_data">
-                Relative to the font-size of the element (2em means 2 times the
-                size of the current font)
+                Relative to font-size of the root element.
               </td>
             </tr>
             <tr class="table_row" id="selector_table_row">
               <td class="table_data left" id="selector_table_data">vh/vw</td>
               <td class="table_data right" id="selector_table_data">
-                Relative to the font-size of the element (2em means 2 times the
-                size of the current font)
+                Relative to 1% of the height/width of the viewport* respectively.
               </td>
             </tr>
             <tr class="table_row" id="selector_table_row">
               <td class="table_data left" id="selector_table_data">%</td>
               <td class="table_data right" id="selector_table_data">
-                Relative to the font-size of the element (2em means 2 times the
-                size of the current font)
+                Relative to the parent element.
               </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+                <td class="table_data left" id="selector_table_data">vmin/vmax</td>
+                <td class="table_data right" id="selector_table_data">
+                Relative to 1% of viewport's* smaller/larger dimension
+                </td>
+            </tr>
+            <tr class="table_row" id="selector_table_row">
+                <td class="table_data left" id="selector_table_data">px</td>
+                <td class="table_data right" id="selector_table_data">
+                pixels (1px = 1/96th of 1in)
+                </td>
             </tr>
           </table>
         </div>
@@ -253,8 +247,14 @@
         <div class="container" id="cheatsheet-header">
           <div class="cheatsheet_title">CSS CheatSheet</div>
           <div class="personal_details">
-            <div class="twitter" id="link">@twitter</div>
-            <div class="github" id="link">@github</div>
+            <div class="twitter" id="link">
+                <img src="twitter.svg" alt="twitter">
+                <a href="https://twitter.com/hmansh_" target="_blank">@twitter</a>
+            </div>
+            <div class="github" id="link">
+                <img src="github.svg" alt="twitter">
+                <a href="https://github.com/hmansh" target="_blank">@github</a>
+            </div>
           </div>
         </div>
         <div class="container" id="colors">
@@ -395,5 +395,56 @@
         </div>
       </div>
     </div>
+    <script>
+        function copyTextButton() {
+            var copyText = `
+            .btn {
+                text-transform: uppercase;
+                padding: 10px;
+                display: block;
+                margin: 5px auto;
+                min-width: 80%;
+                border: none;
+                outline: none;
+                border-radius: 3px;
+                color: white;
+                font-weight: 600;
+                font-size: 0.7rem;
+                background: #0526dd;
+                box-shadow: 1px 1px 2px rgb(184, 184, 184);
+                }
+
+            .btn:hover {
+                background: #041780;
+                cursor: pointer;
+                box-shadow: 1px 1px 2px rgb(97, 97, 97);
+            }
+            `;
+            console.log("Button");
+            navigator.clipboard.writeText(copyText);
+        };
+        function copyTextInput() {
+            var copyText = `
+            .input {
+                display: block;
+                padding: 7px 28px;
+                margin: 5px auto;
+                border-radius: 3px;
+                outline: none;
+                border: 1px solid #909ba8;
+                min-width: 90%;
+                background-image: url('search.svg');
+                background-repeat: no-repeat;
+                background-position: 7px;
+            }
+
+            .input:focus {
+                box-shadow: 0 0 0 4px rgba(4, 37, 220, 0.3);
+            }`
+            ;
+            console.log("Input");
+            navigator.clipboard.writeText(copyText);
+        };
+    </script>
   </body>
 </html>
