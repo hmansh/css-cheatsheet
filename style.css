@@ -451,7 +451,7 @@ a {
     outline: none;
     border: 1px solid #909ba8;
     min-width: 90%;
-    background-image: url('search.svg');
+    background-image: url('/static/search.svg');
     background-repeat: no-repeat;
     background-position: 7px;
 }
